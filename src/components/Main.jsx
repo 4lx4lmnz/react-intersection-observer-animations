@@ -1,11 +1,10 @@
 import React from 'react';
+import SplashPage from './SplashPage';
 
 function Main() {
   return (
     <main>
-      <section className='home-intro'>
-        <h1>Intersection Observer is pretty useful</h1>
-      </section>
+      <SplashPage />
 
       <div className='home-about'>
         <h2>About us</h2>
