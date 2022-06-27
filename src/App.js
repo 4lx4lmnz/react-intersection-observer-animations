@@ -1,13 +1,25 @@
+import React, { useState } from 'react';
 import './App.scss';
 import HomePage from './components/HomePage';
 import Navbar from './components/Navbar';
 
 function App() {
+  const [navScrolled, setNavScrolled] = useState(false);
+
   return (
     <>
-      <Navbar />
+      <Navbar scrolled={navScrolled} />
 
-      <HomePage />
+      <HomePage
+        intersectionHandler={{
+          onIntersect: () => {
+            setNavScrolled(false);
+          },
+          onNotIntersect: () => {
+            setNavScrolled(true);
+          },
+        }}
+      />
     </>
   );
 }
