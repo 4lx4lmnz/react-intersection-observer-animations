@@ -3,7 +3,7 @@ import AboutUsPage from './AboutUsPage';
 import MoreInfoPage from './MoreInfoPage';
 import SplashPage from './SplashPage';
 
-function Main() {
+function HomePage() {
   return (
     <main>
       <SplashPage />
@@ -15,4 +15,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default HomePage;
