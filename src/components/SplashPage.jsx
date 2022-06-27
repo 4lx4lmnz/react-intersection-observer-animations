@@ -1,32 +1,18 @@
 import React, { useCallback, useEffect, useRef } from 'react';
+import { useInterObs } from '../customHooks';
 
 function SplashPage({ intersectionHandler }) {
   const sectionRef = useRef(null);
+  const intersectionOpts = {
+    rootMargin: '-200px 0px 0px 0px',
+  };
 
-  const scrollObserver = useCallback(
-    (node) => {
-      const intersectionOpts = {
-        rootMargin: '-200px 0px 0px 0px',
-      };
-
-      new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            intersectionHandler.onIntersect();
-          } else {
-            intersectionHandler.onNotIntersect();
-          }
-        });
-      }, intersectionOpts).observe(node);
-    },
-    [intersectionHandler]
+  useInterObs(
+    sectionRef,
+    intersectionHandler.onIntersect,
+    intersectionHandler.onNotIntersect,
+    intersectionOpts
   );
-
-  useEffect(() => {
-    if (sectionRef.current) {
-      scrollObserver(sectionRef.current);
-    }
-  }, [sectionRef, scrollObserver]);
 
   return (
     <section className='home-intro' ref={sectionRef}>
