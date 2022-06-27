@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Navbar() {
+function Navbar({ scrolled }) {
   return (
-    <header>
+    <header className={scrolled && 'nav-scrolled'}>
       <a href='/#' className='site-logo' aria-label='homepage'>
         IntObs
       </a>
