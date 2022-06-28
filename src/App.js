@@ -11,13 +11,12 @@ function App() {
       <Navbar scrolled={navScrolled} />
 
       <HomePage
-        intersectionHandler={{
-          onIntersect: () => {
+        onChange={(inView) => {
+          if (inView) {
             setNavScrolled(false);
-          },
-          onNotIntersect: () => {
+          } else {
             setNavScrolled(true);
-          },
+          }
         }}
       />
     </>

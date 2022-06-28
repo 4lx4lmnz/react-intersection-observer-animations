@@ -3,10 +3,10 @@ import AboutUsPage from './AboutUsPage';
 import MoreInfoPage from './MoreInfoPage';
 import SplashPage from './SplashPage';
 
-function HomePage({ intersectionHandler }) {
+function HomePage({ onChange }) {
   return (
     <main>
-      <SplashPage intersectionHandler={intersectionHandler} />
+      <SplashPage onChange={onChange} />
 
       <AboutUsPage />
 

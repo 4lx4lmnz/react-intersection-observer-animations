@@ -1,18 +1,12 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import { useInterObs } from '../customHooks';
+import { useInView } from 'react-intersection-observer';
 
-function SplashPage({ intersectionHandler }) {
-  const sectionRef = useRef(null);
+function SplashPage({ onChange }) {
   const intersectionOpts = {
     rootMargin: '-200px 0px 0px 0px',
+    onChange: onChange,
   };
-
-  useInterObs(
-    sectionRef,
-    intersectionHandler.onIntersect,
-    intersectionHandler.onNotIntersect,
-    intersectionOpts
-  );
+  const { ref: sectionRef, inView } = useInView(intersectionOpts);
 
   return (
     <section className='home-intro' ref={sectionRef}>
