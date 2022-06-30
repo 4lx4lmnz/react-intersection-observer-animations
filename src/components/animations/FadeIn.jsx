@@ -12,7 +12,7 @@ function FadeIn({ children }) {
   return (
     <InView
       as='div'
-      className={`col fade-in`}
+      className='fade-in'
       onChange={handleInView}
       threshold={0}
       rootMargin='0px 0px -250px 0px'
