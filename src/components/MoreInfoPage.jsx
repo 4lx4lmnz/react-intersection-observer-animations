@@ -1,5 +1,5 @@
 import React from 'react';
-import SlideIn from './SlideIn';
+import SlideIn from './animations/SlideIn';
 
 function MoreInfoPage() {
   return (
