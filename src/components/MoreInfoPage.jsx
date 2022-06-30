@@ -1,14 +1,13 @@
 import React from 'react';
+import DualSlideIn from './animations/DualSlideIn';
 import SlideIn from './animations/SlideIn';
 
 function MoreInfoPage() {
   return (
     <div className='home-more-stuff'>
-      <div className='more-stuff-grid'>
-        <SlideIn fromRight={false}>
-          <img src='https://unsplash.it/400' alt='' />
-        </SlideIn>
-        <SlideIn fromRight={true}>
+      <DualSlideIn
+        left={<img src='https://unsplash.it/400' alt='' />}
+        right={
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
             quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
@@ -16,10 +15,10 @@ function MoreInfoPage() {
             Dolorem vero exercitationem consequuntur, eligendi cupiditate
             debitis facilis quibusdam magni. Eveniet.
           </p>
-        </SlideIn>
-      </div>
-      <div className='more-stuff-grid'>
-        <SlideIn fromRight={false}>
+        }
+      />
+      <DualSlideIn
+        left={
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
             quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
@@ -27,67 +26,57 @@ function MoreInfoPage() {
             Dolorem vero exercitationem consequuntur, eligendi cupiditate
             debitis facilis quibusdam magni. Eveniet.
           </p>
-        </SlideIn>
-        <SlideIn fromRight={true}>
-          <img src='https://unsplash.it/401' alt='' />
-        </SlideIn>
-      </div>
-      <div className='more-stuff-grid'>
-        <img
-          src='https://unsplash.it/400'
-          alt=''
-          className='slide-in from-left'
-        />
-        <p className='slide-in from-right'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
-          quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
-          omnis sapiente neque cumque consequuntur reiciendis deserunt. Dolorem
-          vero exercitationem consequuntur, eligendi cupiditate debitis facilis
-          quibusdam magni. Eveniet.
-        </p>
-      </div>
-      <div className='more-stuff-grid'>
-        <p className='slide-in from-left'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
-          quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
-          omnis sapiente neque cumque consequuntur reiciendis deserunt. Dolorem
-          vero exercitationem consequuntur, eligendi cupiditate debitis facilis
-          quibusdam magni. Eveniet.
-        </p>
-        <img
-          src='https://unsplash.it/401'
-          alt=''
-          className='slide-in from-right'
-        />
-      </div>
-      <div className='more-stuff-grid'>
-        <img
-          src='https://unsplash.it/400'
-          alt=''
-          className='slide-in from-left'
-        />
-        <p className='slide-in from-right'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
-          quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
-          omnis sapiente neque cumque consequuntur reiciendis deserunt. Dolorem
-          vero exercitationem consequuntur, eligendi cupiditate debitis facilis
-          quibusdam magni. Eveniet.
-        </p>
-      </div>
-      <div className='more-stuff-grid'>
-        <p className='slide-in from-left'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
-          quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
-          omnis sapiente neque cumque consequuntur reiciendis deserunt. Dolorem
-          vero exercitationem consequuntur, eligendi cupiditate debitis facilis
-          quibusdam magni. Eveniet.
-        </p>
-        <img
-          src='https://unsplash.it/401'
-          alt=''
-          className='slide-in from-right'
-        />
-      </div>
+        }
+        right={<img src='https://unsplash.it/401' alt='' />}
+      />
+      <DualSlideIn
+        left={<img src='https://unsplash.it/400' alt='' />}
+        right={
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+            quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+            omnis sapiente neque cumque consequuntur reiciendis deserunt.
+            Dolorem vero exercitationem consequuntur, eligendi cupiditate
+            debitis facilis quibusdam magni. Eveniet.
+          </p>
+        }
+      />
+      <DualSlideIn
+        left={<img src='https://unsplash.it/400' alt='' />}
+        right={
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+            quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+            omnis sapiente neque cumque consequuntur reiciendis deserunt.
+            Dolorem vero exercitationem consequuntur, eligendi cupiditate
+            debitis facilis quibusdam magni. Eveniet.
+          </p>
+        }
+      />
+      <DualSlideIn
+        left={
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+            quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+            omnis sapiente neque cumque consequuntur reiciendis deserunt.
+            Dolorem vero exercitationem consequuntur, eligendi cupiditate
+            debitis facilis quibusdam magni. Eveniet.
+          </p>
+        }
+        right={<img src='https://unsplash.it/401' alt='' />}
+      />
+      <DualSlideIn
+        left={<img src='https://unsplash.it/400' alt='' />}
+        right={
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+            quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+            omnis sapiente neque cumque consequuntur reiciendis deserunt.
+            Dolorem vero exercitationem consequuntur, eligendi cupiditate
+            debitis facilis quibusdam magni. Eveniet.
+          </p>
+        }
+      />
     </div>
   );
 }
