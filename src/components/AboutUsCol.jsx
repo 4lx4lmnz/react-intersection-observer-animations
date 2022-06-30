@@ -3,12 +3,12 @@ import FadeIn from './animations/FadeIn';
 
 function AboutUsCol({ topic, description }) {
   return (
-    <FadeIn>
-      <div className='col'>
+    <div className='col'>
+      <FadeIn>
         <h3>{topic}</h3>
         <p>{description}</p>
-      </div>
-    </FadeIn>
+      </FadeIn>
+    </div>
   );
 }
 
