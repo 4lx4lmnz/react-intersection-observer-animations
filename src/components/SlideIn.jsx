@@ -1,5 +1,6 @@
 import React from 'react';
 import { InView } from 'react-intersection-observer';
+import PropTypes from 'prop-types';
 
 function SlideIn({ children, fromRight = true }) {
   const handleInView = (inView, entry) => {
@@ -13,7 +14,7 @@ function SlideIn({ children, fromRight = true }) {
   return (
     <InView
       as='div'
-      className={fromRight ? 'from-right' : 'from-left'}
+      className={`slide-in ${fromRight ? 'from-right' : 'from-left'}`}
       onChange={handleInView}
       threshold={0}
       rootMargin='0px 0px -250px 0px'
@@ -22,5 +23,10 @@ function SlideIn({ children, fromRight = true }) {
     </InView>
   );
 }
+
+SlideIn.propTypes = {
+  children: PropTypes.element.isRequired,
+  fromRight: PropTypes.bool,
+};
 
 export default SlideIn;
