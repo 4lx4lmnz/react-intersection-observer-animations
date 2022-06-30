@@ -1,5 +1,4 @@
 import React from 'react';
-import { InView } from 'react-intersection-observer';
 import AboutUsCol from './AboutUsCol';
 
 function AboutUsPage() {
