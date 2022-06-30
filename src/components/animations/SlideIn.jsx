@@ -9,8 +9,6 @@ function SlideIn({ children, fromRight = true }) {
     }
   };
 
-  console.log(children);
-
   return (
     <InView
       as='div'
