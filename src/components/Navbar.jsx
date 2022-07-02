@@ -9,7 +9,7 @@ import {
 
 function Navbar({ scrolled }) {
   return (
-    <StyledNavbar className={scrolled ? 'nav-scrolled' : ''}>
+    <StyledNavbar scrolled={scrolled}>
       <Logo href='/#' aria-label='homepage'>
         IntObs2
       </Logo>
