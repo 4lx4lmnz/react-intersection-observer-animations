@@ -57,7 +57,7 @@ export const Link = styled.a`
   }
 `;
 
-export const Button = styled.a`
+export const Button = styled(Link)`
   border: 1.5px solid currentColor;
   border-radius: 2em;
   margin-left: 1em;
