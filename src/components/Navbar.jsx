@@ -1,48 +1,43 @@
 import React from 'react';
+import {
+  Button,
+  Link,
+  Logo,
+  NavList,
+  StyledNavbar,
+} from './styles/Navbar.styled';
 
 function Navbar({ scrolled }) {
   return (
-    <header className={scrolled ? 'nav-scrolled' : ''}>
-      <a href='/#' className='site-logo' aria-label='homepage'>
-        IntObs
-      </a>
+    <StyledNavbar className={scrolled ? 'nav-scrolled' : ''}>
+      <Logo href='/#' aria-label='homepage'>
+        IntObs2
+      </Logo>
       <nav className='main-nav'>
-        <ul className='nav__list'>
-          <li className='nav__list-item'>
-            <a href='/#' className='nav__link'>
-              Home
-            </a>
+        <NavList>
+          <li>
+            <Link href='/#'>Home</Link>
           </li>
-          <li className='nav__list-item'>
-            <a href='/#' className='nav__link'>
-              About
-            </a>
+          <li>
+            <Link href='/#'>About</Link>
           </li>
-          <li className='nav__list-item'>
-            <a href='/#' className='nav__link'>
-              Another page
-            </a>
+          <li>
+            <Link href='/#'>Another page</Link>
           </li>
-          <li className='nav__list-item'>
-            <a href='/#' className='nav__link'>
-              Pricing
-            </a>
+          <li>
+            <Link href='/#'>Pricing</Link>
           </li>
-          <li className='nav__list-item'>
-            <a href='/#' className='nav__link'>
-              Blog
-            </a>
+          <li>
+            <Link href='/#'>Blog</Link>
           </li>
-        </ul>
+        </NavList>
       </nav>
       <nav className='account'>
-        <ul className='nav__list'>
-          <li className='nav__list-item'>
-            <a className='nav__link nav__link--btn' href='/#'>
-              Login
-            </a>
+        <NavList>
+          <li>
+            <Button href='/#'>Login</Button>
           </li>
-          <li className='nav__list-item'>
+          <li>
             <a
               className='nav__link nav__link--btn nav__link--btn--highlight'
               href='/#'
@@ -50,9 +45,9 @@ function Navbar({ scrolled }) {
               Join
             </a>
           </li>
-        </ul>
+        </NavList>
       </nav>
-    </header>
+    </StyledNavbar>
   );
 }
 
