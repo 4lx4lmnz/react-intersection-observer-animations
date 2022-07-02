@@ -38,12 +38,9 @@ function Navbar({ scrolled }) {
             <Button href='/#'>Login</Button>
           </li>
           <li>
-            <a
-              className='nav__link nav__link--btn nav__link--btn--highlight'
-              href='/#'
-            >
+            <Button href='/#' highlighted>
               Join
-            </a>
+            </Button>
           </li>
         </NavList>
       </nav>

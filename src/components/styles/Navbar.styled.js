@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledNavbar = styled.header`
   position: fixed;
@@ -13,6 +13,12 @@ export const StyledNavbar = styled.header`
   transition: background 250ms ease-in;
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.text.default};
+
+  ${(props) =>
+    props.scrolled &&
+    css`
+      box-shadow: 0px 3px 20px rgba(0 0 0 / 0.2);
+    `}
 `;
 
 export const Logo = styled.a`
@@ -75,14 +81,16 @@ export const Button = styled(Link)`
     display: none;
   }
 
-  &--highlight {
-    background: limegreen;
-    border-color: limegreen;
-    color: #333;
+  ${(props) =>
+    props.highlighted &&
+    css`
+      background: limegreen;
+      border-color: limegreen;
+      color: #333;
 
-    &:hover {
-      background: ${({ theme }) => theme.text.default};
-      border-color: ${({ theme }) => theme.text.default};
-    }
-  }
+      &:hover {
+        background: ${({ theme }) => theme.text.default};
+        border-color: ${({ theme }) => theme.text.default};
+      }
+    `}
 `;
