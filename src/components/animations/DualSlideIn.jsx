@@ -6,8 +6,8 @@ import { StyledDualSlideIn } from '../styles/animations/DualSlideIn.styled';
 function DualSlideIn({ left, right }) {
   return (
     <StyledDualSlideIn>
-      <SlideIn fromRight={false}>{left}</SlideIn>
-      <SlideIn fromRight={true}>{right}</SlideIn>
+      <SlideIn>{left}</SlideIn>
+      <SlideIn fromRight>{right}</SlideIn>
     </StyledDualSlideIn>
   );
 }
