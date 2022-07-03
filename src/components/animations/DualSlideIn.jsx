@@ -1,13 +1,14 @@
 import React from 'react';
 import SlideIn from './SlideIn';
 import PropTypes from 'prop-types';
+import { StyledDualSlideIn } from '../styles/animations/DualSlideIn.styled';
 
 function DualSlideIn({ left, right }) {
   return (
-    <div className='more-stuff-grid'>
+    <StyledDualSlideIn>
       <SlideIn fromRight={false}>{left}</SlideIn>
       <SlideIn fromRight={true}>{right}</SlideIn>
-    </div>
+    </StyledDualSlideIn>
   );
 }
 

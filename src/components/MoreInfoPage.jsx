@@ -3,7 +3,7 @@ import DualSlideIn from './animations/DualSlideIn';
 
 function MoreInfoPage() {
   return (
-    <div className='home-more-stuff'>
+    <div>
       <DualSlideIn
         left={<img src='https://unsplash.it/400' alt='' />}
         right={
