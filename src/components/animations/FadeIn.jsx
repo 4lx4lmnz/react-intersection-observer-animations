@@ -1,24 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { InView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
+import { StyledFadeIn } from '../styles/animations/FadeIn.styled';
 
 function FadeIn({ children }) {
-  const handleInView = (inView, entry) => {
-    if (inView) {
-      entry.target.classList.add('appear');
-    }
-  };
+  const { ref, inView } = useInView({
+    // Content will fade-in at an earlier position
+    rootMargin: '0px 0px -250px 0px',
+    threshold: 0,
+  });
 
   return (
-    <InView
-      as='div'
-      className='fade-in'
-      onChange={handleInView}
-      threshold={0}
-      rootMargin='0px 0px -250px 0px'
-    >
+    <StyledFadeIn ref={ref} appear={inView}>
       {children}
-    </InView>
+    </StyledFadeIn>
   );
 }
 

@@ -1,26 +1,43 @@
 import React from 'react';
-import AboutUsCol from './AboutUsCol';
+import FadeIn from './animations/FadeIn';
+import { Col, Columns, Container } from './styles/AboutUsPage.styled';
 
 function AboutUsPage() {
   return (
-    <div className='home-about'>
+    <Container>
       <h2>About us</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-      <div className='columns'>
-        <AboutUsCol
-          topic='Lorem, ipsum.'
-          description=' Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae maiores fuga eos provident voluptas perferendis.'
-        />
-        <AboutUsCol
-          topic='A, illo!'
-          description='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima quo beatae eius blanditiis officiis.'
-        />
-        <AboutUsCol
-          topic='Repudiandae, error?'
-          description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quasi quis doloribus quia illum laudantium.'
-        />
-      </div>
-    </div>
+
+      <Columns>
+        <Col>
+          <FadeIn>
+            <h3>Lorem, ipsum.</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
+              maiores fuga eos provident voluptas perferendis.
+            </p>
+          </FadeIn>
+        </Col>
+        <Col>
+          <FadeIn>
+            <h3>A, illo!</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus minima quo beatae eius blanditiis officiis.
+            </p>
+          </FadeIn>
+        </Col>
+        <Col>
+          <FadeIn>
+            <h3>Repudiandae, error?</h3>
+            <p>
+              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+              quasi quis doloribus quia illum laudantium.
+            </p>
+          </FadeIn>
+        </Col>
+      </Columns>
+    </Container>
   );
 }
 
