@@ -4,6 +4,7 @@ import { StyledHomeIntro } from './styles/HomeIntro.styled';
 
 function HomeIntro({ onChange }) {
   const { ref } = useInView({
+    // Pushes the intersection window upward from the content. The content will still be within the viewport but considered no longer intersecting at deeper scroll positions
     rootMargin: '-200px 0px 0px 0px',
     onChange: onChange,
   });
