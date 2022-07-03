@@ -2,9 +2,11 @@ import React from 'react';
 import DualSlideIn from './animations/DualSlideIn';
 
 function MoreInfoPage() {
+  const options = { triggerOnce: true };
   return (
     <div>
       <DualSlideIn
+        options={options}
         left={<img src='https://unsplash.it/400' alt='' />}
         right={
           <p>
@@ -17,6 +19,7 @@ function MoreInfoPage() {
         }
       />
       <DualSlideIn
+        options={options}
         left={
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
@@ -29,6 +32,7 @@ function MoreInfoPage() {
         right={<img src='https://unsplash.it/401' alt='' />}
       />
       <DualSlideIn
+        options={options}
         left={<img src='https://unsplash.it/400' alt='' />}
         right={
           <p>
@@ -41,6 +45,7 @@ function MoreInfoPage() {
         }
       />
       <DualSlideIn
+        options={options}
         left={
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
@@ -53,6 +58,7 @@ function MoreInfoPage() {
         right={<img src='https://unsplash.it/401' alt='' />}
       />
       <DualSlideIn
+        options={options}
         left={<img src='https://unsplash.it/400' alt='' />}
         right={
           <p>

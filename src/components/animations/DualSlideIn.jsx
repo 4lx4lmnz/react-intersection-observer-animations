@@ -3,11 +3,13 @@ import SlideIn from './SlideIn';
 import PropTypes from 'prop-types';
 import { StyledDualSlideIn } from '../styles/animations/DualSlideIn.styled';
 
-function DualSlideIn({ left, right }) {
+function DualSlideIn({ left, right, options }) {
   return (
     <StyledDualSlideIn>
-      <SlideIn>{left}</SlideIn>
-      <SlideIn fromRight>{right}</SlideIn>
+      <SlideIn options={options}>{left}</SlideIn>
+      <SlideIn options={options} fromRight>
+        {right}
+      </SlideIn>
     </StyledDualSlideIn>
   );
 }
@@ -15,6 +17,7 @@ function DualSlideIn({ left, right }) {
 DualSlideIn.propTypes = {
   left: PropTypes.element.isRequired,
   right: PropTypes.element.isRequired,
+  options: PropTypes.object,
 };
 
 export default DualSlideIn;
