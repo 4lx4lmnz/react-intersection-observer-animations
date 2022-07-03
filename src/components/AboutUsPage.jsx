@@ -3,6 +3,7 @@ import FadeIn from './animations/FadeIn';
 import { Col, Columns, Container } from './styles/AboutUsPage.styled';
 
 function AboutUsPage() {
+  const options = { triggerOnce: true };
   return (
     <Container>
       <h2>About us</h2>
@@ -10,7 +11,7 @@ function AboutUsPage() {
 
       <Columns>
         <Col>
-          <FadeIn>
+          <FadeIn options={options}>
             <h3>Lorem, ipsum.</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
@@ -19,7 +20,7 @@ function AboutUsPage() {
           </FadeIn>
         </Col>
         <Col>
-          <FadeIn>
+          <FadeIn options={options}>
             <h3>A, illo!</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -28,7 +29,7 @@ function AboutUsPage() {
           </FadeIn>
         </Col>
         <Col>
-          <FadeIn>
+          <FadeIn options={options}>
             <h3>Repudiandae, error?</h3>
             <p>
               'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
